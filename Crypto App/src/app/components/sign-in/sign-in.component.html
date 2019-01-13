@@ -1,0 +1,22 @@
+<div class="container" style="width: 40%;">
+  <h1 style="text-align: center;color: white;font-size: 60px; font-size: 400%;
+  font-weight:200;
+  letter-spacing: 6px;">Crypto View App</h1>
+  <table class="table table-light table-hover" style="border: 1px solid;
+    font-weight: 900;
+    box-shadow: 10px 7px 24px -8px white">
+    <thead>
+      <tr style="font-size: large;">
+        <th style="width: 50%; color:white">Rank</th>
+        <th style="color:white">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let item of coinData; let i= index; " [ngClass]="{'bg': i % 2 == 0 }">
+        <td style="cursor: pointer;" (click)="setData(item)">{{item.cmc_rank}}</td>
+        <td style="cursor: pointer;" (click)="setData(item)">{{item.name}}</td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
+
